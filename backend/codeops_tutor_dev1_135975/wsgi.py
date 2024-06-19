@@ -11,8 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault(
-    "DJANGO_SETTINGS_MODULE", "codeops_tutor_dev1_135975.settings"
-)
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "codeops_tutor_dev1_135975.settings")
 
 application = get_wsgi_application()
