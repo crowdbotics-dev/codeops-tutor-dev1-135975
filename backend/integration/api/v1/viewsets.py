@@ -1,5 +1,5 @@
 from rest_framework import authentication
-from integration.models import APIIntegration, Webhook
+from integration.models import Webhook, APIIntegration
 from .serializers import APIIntegrationSerializer, WebhookSerializer
 from rest_framework import viewsets
 

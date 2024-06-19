@@ -11,9 +11,9 @@ class IndividualUser(models.Model):
     )
     enterprise = models.ForeignKey(
         "core.Enterprise",
-        on_delete=models.SET_NULL,
         null=True,
         blank=True,
+        on_delete=models.SET_NULL,
         related_name="individualuser_enterprise",
     )
     role = models.CharField(
@@ -27,9 +27,9 @@ class Enterprise(models.Model):
         max_length=255,
     )
     industry = models.CharField(
-        max_length=255,
         null=True,
         blank=True,
+        max_length=255,
     )
     size = models.IntegerField(
         null=True,

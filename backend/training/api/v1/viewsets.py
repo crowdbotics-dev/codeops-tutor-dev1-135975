@@ -1,5 +1,5 @@
 from rest_framework import authentication
-from training.models import Module, Certification
+from training.models import Certification, Module
 from .serializers import CertificationSerializer, ModuleSerializer
 from rest_framework import viewsets
 

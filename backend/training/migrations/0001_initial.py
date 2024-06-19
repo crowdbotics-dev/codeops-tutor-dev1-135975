@@ -5,30 +5,59 @@ import django.db.models.deletion
 
 
 class Migration(migrations.Migration):
-
     initial = True
 
     dependencies = [
-        ('core', '0001_initial'),
+        ("core", "0001_initial"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='Module',
+            name="Module",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('title', models.CharField(max_length=255)),
-                ('description', models.TextField()),
-                ('difficulty_level', models.CharField(max_length=50)),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("title", models.CharField(max_length=255)),
+                ("description", models.TextField()),
+                ("difficulty_level", models.CharField(max_length=50)),
             ],
         ),
         migrations.CreateModel(
-            name='Certification',
+            name="Certification",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('date_earned', models.DateField(blank=True, null=True)),
-                ('module', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='certification_module', to='training.module')),
-                ('user', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='certification_user', to='core.individualuser')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("date_earned", models.DateField(blank=True, null=True)),
+                (
+                    "module",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="certification_module",
+                        to="training.module",
+                    ),
+                ),
+                (
+                    "user",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="certification_user",
+                        to="core.individualuser",
+                    ),
+                ),
             ],
         ),
     ]

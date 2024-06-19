@@ -1,10 +1,10 @@
 from django.urls import path
 from .views import (
     user_update_view,
-    UserUpdateView,
     user_detail_view,
     UserDetailView,
     user_redirect_view,
+    UserUpdateView,
 )
 
 app_name = "users"

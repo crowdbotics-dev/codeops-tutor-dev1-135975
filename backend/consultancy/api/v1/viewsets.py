@@ -1,5 +1,5 @@
 from rest_framework import authentication
-from consultancy.models import ConsultancySession, Project
+from consultancy.models import Project, ConsultancySession
 from .serializers import ConsultancySessionSerializer, ProjectSerializer
 from rest_framework import viewsets
 

@@ -16,6 +16,10 @@ class AuditLog(models.Model):
         on_delete=models.CASCADE,
         related_name="auditlog_user",
     )
+    actionResult = models.TextField(
+        null=True,
+        blank=True,
+    )
 
 
 class Vulnerability(models.Model):
